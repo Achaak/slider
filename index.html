@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider demo</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Slider demo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="slider.css">
+    </head>
+    <body>
+        <div id="slider"></div>
+    </body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="slider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            slider.init("#slider", 
+            [
+                {
+                    "url": "pictures/github-logo-1.png", 
+                    "link":"https://github.com/"
+                }, 
+                {
+                    "url": "pictures/github-logo-2.jpg", 
+                    "onClick": function() {alert("Hello world !")}
+                }
+            ], 5000);
+        });
+    </script>
+</html>
