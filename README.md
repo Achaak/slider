@@ -22,7 +22,7 @@ For initialize the slider, insert this example snippet and update this with your
 Exemple: 
 ``` js
 $(document).ready(function() {
-    slider.init(
+    slider().init(
         "#slider", 
         [
             {

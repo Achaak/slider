@@ -1,4 +1,4 @@
-var slider = (function () {
+function slider() {
     // DOM variable
     var sliderDOM   = undefined;
     var btnsDOM     = $('<div class="btns-slider"></div>');
@@ -183,4 +183,4 @@ var slider = (function () {
             clearLoop();
         }
     };
-})();
+}
