@@ -40,6 +40,9 @@ $(document).ready(function() {
 
 ## Fonctions :
 - [slider().init](#init)
+- [slider().changePicture](#changePicture)
+- [slider().startSlider](#startSlider)
+- [slider().stopSlider](#stopSlider)
 
 __slider().init__ <a name="init"></a>
 ``` js
@@ -53,7 +56,7 @@ __slider().init__ <a name="init"></a>
 slider.init(_elem, _pictures, _interval);
 ```
 
-__slider().changePicture__
+__slider().changePicture__ <a name="changePicture"></a>
 ``` js
 /**
  * Used to change a picture on the slider
@@ -63,7 +66,7 @@ __slider().changePicture__
 slider.changePicture(id);
 ```
 
-__slider().startSlider__
+__slider().startSlider__ <a name="startSlider"></a>
 ``` js
 /**
  * Used to start the slider interval
@@ -71,7 +74,7 @@ __slider().startSlider__
 slider.startSlider();
 ```
 
-__slider.stopSlider__
+__slider.stopSlider__ <a name="stopSlider"></a>
 ``` js
 /**
  * Used to stop the slider interval
