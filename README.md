@@ -1,5 +1,4 @@
 # slider
-
 This is a module to simply add a slider to your site.
 
 ## Requirement :
@@ -9,12 +8,12 @@ This is a module to simply add a slider to your site.
 Load the required files.
 Inside the page's head tag include the slider's CSS file.
 ``` html
-<link rel="stylesheet" href="slider.css">
+<link rel="stylesheet" href="/your-path/slider.css">
 ```
 
 And in the page's footer, include the required javascript files.
 ``` html
-<script src="slider.js"></script>
+<script src="/your-path/slider.js"></script>
 ```
 
 ## Initialize :
@@ -40,7 +39,9 @@ $(document).ready(function() {
 ```
 
 ## Fonctions :
-__slider.init__
+- [slider().init](#init)
+
+__slider().init__ <a name="init"></a>
 ``` js
 /**
  * Used to initialize the slider
@@ -52,7 +53,7 @@ __slider.init__
 slider.init(_elem, _pictures, _interval);
 ```
 
-__slider.changePicture__
+__slider().changePicture__
 ``` js
 /**
  * Used to change a picture on the slider
@@ -62,7 +63,7 @@ __slider.changePicture__
 slider.changePicture(id);
 ```
 
-__slider.startSlider__
+__slider().startSlider__
 ``` js
 /**
  * Used to start the slider interval
