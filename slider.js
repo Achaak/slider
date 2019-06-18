@@ -1,4 +1,4 @@
-function slider() {
+function Slider() {
     // DOM variable
     var sliderDOM   = undefined;
     var btnsDOM     = $('<div class="btns-slider"></div>');
@@ -14,12 +14,12 @@ function slider() {
     /**
      * Used to create the slider
      *
-     * @private
+     * @public
      * @param {string} _elem Class or id of the slider
      * @param {Array} _pictures List of the pictures path and link
      * @param {number} _interval Interval between the picture (millisecond)
      */
-    function createSlider(_elem, _pictures, _interval) {
+    function init(_elem, _pictures, _interval) {
         // Create the DOM
         sliderDOM = $(_elem);
         sliderDOM.empty();
@@ -41,7 +41,7 @@ function slider() {
         if(_pictures) createPictures(pictures);
 
         // Start the loop
-        startLoop();
+        startSlider();
         
     };
 
@@ -65,8 +65,8 @@ function slider() {
                 changePicture(_target.index());
 
                 // Reset interval
-                clearLoop();
-                startLoop();
+                stopSlider();
+                startSlider();
             });
 
             btnsDOM.append(_btnSlider);
@@ -126,7 +126,7 @@ function slider() {
     /**
      * Used to change a picture on the slider
      *
-     * @private
+     * @public
      * @param {number} id Id of the picture
      */
     function changePicture(id) {
@@ -149,9 +149,9 @@ function slider() {
     /**
      * Used to start the loop
      *
-     * @private
+     * @public
      */
-    function startLoop() {
+    function startSlider() {
         clearInterval(interval);
         interval = setInterval(function(){ cptPicture++; changePicture() }, timeout);
     }
@@ -161,9 +161,9 @@ function slider() {
     /**
      * Used to clear the loop
      *
-     * @private
+     * @public
      */
-    function clearLoop() {
+    function stopSlider() {
         clearInterval(interval);
     }
 
@@ -171,16 +171,16 @@ function slider() {
 
     return {
         "init": function(_elem, _pictures, _interval) {
-            createSlider(_elem, _pictures, _interval);
+            init(_elem, _pictures, _interval);
         },
         "changePicture": function(_id) {
             changePicture(_id);
         },
         "startSlider": function() {
-            startLoop();
+            startSlider();
         },
         "stopSlider": function() {
-            clearLoop();
+            stopSlider();
         }
     };
 }
