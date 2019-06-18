@@ -1,6 +1,8 @@
 # slider
 This is a module to simply add a slider to your site.
 
+<img src="pictures/slider-preview.png" alt="slider preview"/>
+
 ## Requirement :
 * JQuery
 
